@@ -1,0 +1,45 @@
+
+body {
+    overflow: hidden;
+}
+
+.titleBig {
+    font-size: 100px;
+    margin-top: 0;
+    transition-property: width;
+    transition-duration: 2s;
+    transition-timing-function: linear;
+    animation: mymove 6s infinite ease-in-out, disappear 12s ease-out;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.titleSmall {
+    font-size: 40px;
+    margin-left: 2vw;
+    color:rgb(255, 117, 117);
+    animation: disappear 12s;
+    opacity: 0;
+    visibility: hidden;
+}
+
+@keyframes mymove {
+    0% {transform: rotate(-6deg);}
+    50% {transform: rotate(6deg);}
+    100% {transform: rotate(-6deg);}
+}
+
+@keyframes disappear {
+    0% {opacity: 1; visibility: visible;}
+    100% {opacity: 0; visibility: hidden;}
+}
+
+@media (max-width: 500px) {
+    .titleBig {
+        font-size: 40px;
+    }
+
+    .titleSmall {
+        font-size: 16px;
+    }
+}
