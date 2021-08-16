@@ -11,7 +11,7 @@ app.get ('/', (req, res) => {
 app.use ('/client', express.static (__dirname + '/client'));
 
 server.listen (666);
-console.log ('Server started');
+console.log ('Server started: http://localhost:666');
 
 
 
