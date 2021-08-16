@@ -12,7 +12,7 @@ function message (msg) {
 }
 
 socket.on ('writeToChatBox', (msg) => {
-    chatBox.innerHTML = '<div type="text">' + msg + '</div>' + chatBox.innerHTML;
+    chatBox.innerHTML = '<div class="text">' + msg + '</div>' + chatBox.innerHTML;
 })
 
 chatForm.onsubmit = (e) => {

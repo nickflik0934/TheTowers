@@ -38,14 +38,14 @@ io.sockets.on ('connection', (socket) => {
 
     socket.on('message', (data) => {
         if (data.message.charAt(0) == '/') {
-            let data = 'Invalid command.';
+            let command = 'Invalid command.';
             try {
-                data = eval(data.message.slice(1, data.message.length))
+                command = eval(data.message.slice(1, data.message.length))
             } catch (e) {
                 
             }
             for(let i in SOCKETS) {
-                SOCKETS[i].emit('writeToChatBox', data);
+                SOCKETS[i].emit('writeToChatBox', command);
             }
         } else {
             for(let i in SOCKETS) {

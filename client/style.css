@@ -23,6 +23,12 @@ body {
     visibility: hidden;
 }
 
+.text {
+    animation: textFade 12s;
+    opacity: 0;
+    visibility: hidden;
+}
+
 @keyframes mymove {
     0% {transform: rotate(-6deg);}
     50% {transform: rotate(6deg);}
@@ -31,6 +37,12 @@ body {
 
 @keyframes disappear {
     0% {opacity: 1; visibility: visible;}
+    100% {opacity: 0; visibility: hidden;}
+}
+
+@keyframes textFade {
+    0% {opacity: 1; visibility: visible;}
+    50% {opacity: 1; visibility: visible;}
     100% {opacity: 0; visibility: hidden;}
 }
 
